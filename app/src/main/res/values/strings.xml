@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Personal Picks</string>
+    <string-array name="categories_dropdown_items">
+        "Apparel",
+        "Beauty",
+        "Giftcard",
+        "Jewelry",
+        "Watches",
+        "Shoes",
+        "Luggage",
+        "Global"
+    </string-array>
+</resources>

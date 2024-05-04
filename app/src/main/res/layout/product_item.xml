@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/_7sdp"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/productImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/penthouse">
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Thin Choise Top Orange"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_weight="0.8"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@color/white"
+                android:padding="@dimen/_2sdp"
+                android:layout_weight="0.2"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:strokeColor="@color/darkGreen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/categoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apparel"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkGreen"
+                        android:textSize="@dimen/_9ssp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/productNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            tools:text="494 Heaney Common Apt. 898 New Lydafurt, OH 65263"
+            android:textColor="@color/darkGray"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
