@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_productsListFragment_to_recommendationFragment"
             app:destination="@id/recommendationFragment" />
+        <action
+            android:id="@+id/action_productsListFragment_to_customerIdSelectFragment"
+            app:destination="@id/customerIdSelectFragment" />
     </fragment>
     <fragment
         android:id="@+id/recommendationFragment"
         android:name="com.majorproject.personalpicks.presentation.RecommendationFragment"
         android:label="fragment_recommendation"
         tools:layout="@layout/fragment_recommendation" />
+    <fragment
+        android:id="@+id/customerIdSelectFragment"
+        android:name="com.majorproject.personalpicks.presentation.CustomerIdSelectFragment"
+        android:label="fragment_customer_id_select"
+        tools:layout="@layout/fragment_customer_id_select" />
 </navigation>

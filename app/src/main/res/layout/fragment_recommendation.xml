@@ -6,6 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.RecommendationFragment">
 
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -27,15 +38,6 @@
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/profilePictureImageView"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/ic_ellipse"
-            android:elevation="@dimen/_6sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_person" />
 
     </LinearLayout>
 
@@ -52,13 +54,14 @@
             android:id="@+id/recommendationTypeHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recommendation Type: "
+            android:text="Recommendation \nType: "
             android:textColor="@color/black"
+            android:layout_gravity="center"
             android:textSize="@dimen/_12ssp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/recommendationTyperecommendationTypeTextInput"
+            android:id="@+id/recommendationTypeTextInput"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,7 +86,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_14sdp">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -91,12 +94,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_24sdp"
+                android:paddingBottom="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 tools:itemCount="2"
                 tools:listitem="@layout/product_item" />
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

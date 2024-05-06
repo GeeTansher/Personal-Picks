@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.majorproject.personalpicks.R
 import com.majorproject.personalpicks.data.model.Product
 import com.majorproject.personalpicks.databinding.ProductItemBinding
 
@@ -33,7 +34,6 @@ class ProductItemAdapter(private val onItemClick:(Product)->Unit) :
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductItemViewHolder {
-            Log.d("itemBooking", "hello")
             return ProductItemViewHolder(
                 ProductItemBinding.inflate(
                     LayoutInflater.from(parent.context),
@@ -51,6 +51,33 @@ class ProductItemAdapter(private val onItemClick:(Product)->Unit) :
                 productIdText.text = item.product_id
                 productNameText.text = item.product_title
                 categoryText.text = item.product_category
+
+                when (item.product_category){
+                    "Apparel" ->
+                        productImageView.setImageResource(R.drawable.apparel)
+
+                    "Beauty" ->
+                        productImageView.setImageResource(R.drawable.beauty)
+
+                    "Gift Card" ->
+                        productImageView.setImageResource(R.drawable.giftcard)
+
+                    "Jewelry" ->
+                        productImageView.setImageResource(R.drawable.jewelry)
+
+                    "Watches" ->
+                        productImageView.setImageResource(R.drawable.watches)
+
+                    "Shoes" ->
+                        productImageView.setImageResource(R.drawable.shoes)
+
+                    "Luggage" ->
+                        productImageView.setImageResource(R.drawable.luggage)
+
+                    "Global" ->
+                        productImageView.setImageResource(R.drawable.global)
+
+                }
                 root.setOnClickListener {
                     onItemClick(item)
                 }
